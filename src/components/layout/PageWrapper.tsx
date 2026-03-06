@@ -1,7 +1,3 @@
-export default function PageWrapper({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PageWrapper({ children }: { children: React.ReactNode }) {
   return <div>{children}</div>;
 }

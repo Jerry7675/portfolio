@@ -16,7 +16,8 @@
       "!build",
       "!.vercel",
       "!.husky",
-      "!pnpm-lock.yaml"
+      "!pnpm-lock.yaml",
+      "!**/*.css"
     ]
   },
   "formatter": {
