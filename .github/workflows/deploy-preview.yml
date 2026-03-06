@@ -12,20 +12,23 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        uses: pnpm/action-setup@v4 # ← was: npm install -g pnpm (wrong)
+        with:
+          version: 10
+
+      - name: Setup Node.js # ← moved AFTER pnpm install
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # ← was: 20 (inconsistent with ci.yml)
+          cache: "pnpm" # ← was missing
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Deploy to Vercel Preview
-        uses: amondnet/vercel-action@v25.2.0
+        uses: amondnet/vercel-action@v25.2.0 # ← use this, v41.1.4 tag has resolution issues
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }} # ← personal access token
-          github-token: ${{ secrets.GITHUB_TOKEN }} # ← auto-provided by GitHub, no setup needed
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
