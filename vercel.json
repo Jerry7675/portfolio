@@ -2,7 +2,7 @@
   "framework": "nextjs",
   "buildCommand": "pnpm run build",
   "devCommand": "pnpm run dev",
-  "installCommand": "pnpm ci",
+  "installCommand":  "pnpm install --frozen-lockfile",
   "regions": ["iad1"],
   "headers": [
     {
