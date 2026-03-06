@@ -3,11 +3,21 @@
   "vcs": {
     "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": true
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
   },
   "files": {
-    "ignoreUnknown": false,
-    "includes": ["**", "!node_modules", "!.next", "!dist", "!build", "!.vercel"]
+    "ignoreUnknown": true,
+    "includes": [
+      "**",
+      "!node_modules",
+      "!.next",
+      "!dist",
+      "!build",
+      "!.vercel",
+      "!.husky",
+      "!pnpm-lock.yaml"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -18,17 +28,27 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
-    },
-    "domains": {
-      "react": "recommended",
-      "next": "recommended"
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noConsole": "warn"
+      },
+      "style": {
+        "useImportType": "error",
+        "noNonNullAssertion": "warn"
+      }
     }
   },
   "javascript": {
     "formatter": {
       "quoteStyle": "double",
-      "trailingCommas": "es5"
+      "trailingCommas": "es5",
+      "semicolons": "always",
+      "arrowParentheses": "always"
     }
   },
   "assist": {

@@ -1,1 +1,2 @@
-pnpm exec biome check --write --staged .
+# .husky/pre-commit
+pnpm biome check --write --staged --no-errors-on-unmatched .
