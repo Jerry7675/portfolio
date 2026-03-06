@@ -10,13 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Install pnpm
         run: npm install -g pnpm
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Deploy to Vercel Preview
-        uses: amondnet/vercel-action@v25
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          node-version: 20
+
+      - name: Deploy to Vercel Preview
+        uses: amondnet/vercel-action@v25.2.0
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # ← personal access token
+          github-token: ${{ secrets.GITHUB_TOKEN }} # ← auto-provided by GitHub, no setup needed
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
