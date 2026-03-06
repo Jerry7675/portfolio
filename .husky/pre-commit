@@ -1,2 +1,4 @@
 # .husky/pre-commit
 pnpm biome check --write --staged --no-errors-on-unmatched .
+git add -u
+pnpm run type-check 
