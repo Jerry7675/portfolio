@@ -1,3 +1,4 @@
+import Sidebar from "./Sidebar";
 export default function Navbar() {
-  return <nav>Navbar</nav>;
+  return <Sidebar />;
 }
