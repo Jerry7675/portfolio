@@ -6,11 +6,12 @@ export default function HeroSection() {
       {/* Profile Photo */}
       <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 hover:border-blue-400 transition-colors duration-300">
         <Image
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
+          src="https://images.unsplash.com/photo-1570499995321-e2f9a3a3de5b?w=500&h=500&fit=crop"
           alt="Jerry Sandesh Profile"
           width={224}
           height={224}
           className="w-full h-full object-cover"
+          priority
         />
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />

@@ -2,9 +2,9 @@ import HeroSection from "@/components/sections/HeroSection";
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100">
+    <>
       {/* Hero Section Container */}
-      <section className="min-h-screen flex items-center justify-center px-4 py-20">
+      <section className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-blue-100 flex items-center justify-center px-4 py-20">
         <div className="w-full max-w-5xl">
           <HeroSection />
         </div>
@@ -44,6 +44,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }
