@@ -1,18 +1,74 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
-    <div className="flex flex-col items-center text-center gap-6">
-      <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 leading-tight drop-shadow-sm">
-        Hi, I'm Jerry Sandesh
-      </h1>
-      <p className="text-xl md:text-2xl text-blue-700 max-w-2xl">
-        Creative Full Stack Developer passionate about building impactful digital experiences.
-      </p>
-      <a
-        href="#projects"
-        className="mt-6 inline-block rounded-lg bg-blue-700 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-blue-800 transition"
-      >
-        View My Work
-      </a>
+    <div className="flex flex-col items-center text-center gap-8 pt-12">
+      {/* Profile Photo */}
+      <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 hover:border-blue-400 transition-colors duration-300">
+        <Image
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
+          alt="Jerry Sandesh Profile"
+          width={224}
+          height={224}
+          className="w-full h-full object-cover"
+        />
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      </div>
+
+      {/* Main Heading */}
+      <div>
+        <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 leading-tight drop-shadow-sm">
+          Jerry Sandesh
+        </h1>
+        <p className="text-xl md:text-2xl text-blue-600 font-semibold mt-2">
+          Full Stack Developer & Problem Solver
+        </p>
+      </div>
+
+      {/* Summary */}
+      <div className="max-w-2xl space-y-4">
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          I build beautiful, scalable web applications that solve real problems. With expertise in
+          modern web technologies, I craft seamless user experiences and robust backend solutions.
+        </p>
+        <p className="text-base md:text-lg text-gray-600">
+          <span className="font-semibold text-blue-800">What I do:</span> Full-stack development,
+          UI/UX design, API integration, and cloud deployment
+        </p>
+      </div>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-8">
+        <a
+          href="#projects"
+          className="inline-block rounded-lg bg-blue-700 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-blue-800 hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+        >
+          View My Work
+        </a>
+        <a
+          href="/contact"
+          className="inline-block rounded-lg bg-white border-2 border-blue-700 px-8 py-4 text-lg font-semibold text-blue-700 shadow-lg hover:bg-blue-50 transition-all duration-200 transform hover:scale-105"
+        >
+          Get In Touch
+        </a>
+      </div>
+
+      {/* Stats / Quick Info */}
+      <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-blue-200 w-full">
+        <div className="text-center">
+          <p className="text-3xl font-bold text-blue-700">5+</p>
+          <p className="text-sm text-gray-600 mt-1">Years Experience</p>
+        </div>
+        <div className="text-center">
+          <p className="text-3xl font-bold text-blue-700">20+</p>
+          <p className="text-sm text-gray-600 mt-1">Projects Completed</p>
+        </div>
+        <div className="text-center">
+          <p className="text-3xl font-bold text-blue-700">100%</p>
+          <p className="text-sm text-gray-600 mt-1">Client Satisfaction</p>
+        </div>
+      </div>
     </div>
   );
 }
