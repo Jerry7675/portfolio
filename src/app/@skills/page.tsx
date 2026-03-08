@@ -1,3 +1,4 @@
+"use client";
 import SkillBar from "@/components/ui/SkillBar";
 
 export default function SkillsPage() {
