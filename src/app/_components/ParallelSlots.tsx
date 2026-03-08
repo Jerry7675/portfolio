@@ -1,29 +1,26 @@
-"use client";
-import dynamic from "next/dynamic";
-
-const MainSlot = dynamic(() => import("../@main/page"));
-const AboutSlot = dynamic(() => import("../@about/page"));
-const ProjectsSlot = dynamic(() => import("../@projects/page"));
-const SkillsSlot = dynamic(() => import("../@skills/page"));
-const ContactSlot = dynamic(() => import("../@contact/page"));
+import AboutPage from "../@about/page";
+import ContactPage from "../@contact/page";
+import MainPage from "../@main/page";
+import ProjectsPage from "../@projects/page";
+import SkillsPage from "../@skills/page";
 
 export default function ParallelSlots() {
   return (
     <>
       <section>
-        <MainSlot />
+        <MainPage />
       </section>
       <section>
-        <AboutSlot />
+        <AboutPage />
       </section>
       <section>
-        <ProjectsSlot />
+        <ProjectsPage />
       </section>
       <section>
-        <SkillsSlot />
+        <SkillsPage />
       </section>
       <section>
-        <ContactSlot />
+        <ContactPage />
       </section>
     </>
   );

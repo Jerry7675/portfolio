@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import projectsData from "@/data/projects.json";
 import type { Project } from "@/types";
@@ -27,7 +28,7 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.15, duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-zinc-800 dark:to-zinc-900 rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-blue-100 hover:shadow-2xl hover:scale-[1.03] transition-transform duration-300"
+            className="bg-linear-to-br from-blue-50 to-blue-100 dark:from-zinc-800 dark:to-zinc-900 rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-blue-100 hover:shadow-2xl hover:scale-[1.03] transition-transform duration-300"
           >
             <h3 className="text-xl font-bold text-blue-800 mb-1">{project.title}</h3>
             <p className="text-gray-700 dark:text-gray-200 flex-1">{project.description}</p>

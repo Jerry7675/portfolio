@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 
 export default function ContactCTA() {
@@ -7,7 +8,7 @@ export default function ContactCTA() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-gradient-to-br from-blue-100 to-blue-200 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl shadow-xl p-10 text-center border border-blue-100"
+      className="bg-linear-to-br from-blue-100 to-blue-200 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl shadow-xl p-10 text-center border border-blue-100"
     >
       <h2 className="text-3xl font-extrabold mb-4 text-blue-900">Let’s Connect!</h2>
       <p className="text-lg mb-6 text-blue-800 max-w-xl mx-auto">

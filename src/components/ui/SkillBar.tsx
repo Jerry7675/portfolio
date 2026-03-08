@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import skillsData from "@/data/skills.json";
 import type { Skill } from "@/types";
