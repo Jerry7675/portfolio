@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useSidebarStore } from "@/store/sidebarStore";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -16,21 +17,13 @@ const menuItems = [
 ];
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const isOpen = useSidebarStore((s) => s.isOpen);
+  const toggleSidebar = useSidebarStore((s) => s.toggle);
+  const closeSidebar = useSidebarStore((s) => s.close);
   const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeSidebar = () => {
-    setIsOpen(false);
-  };
-
   if (!mounted) return null;
 
   return (
@@ -71,7 +64,7 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-blue-50 to-blue-100 shadow-2xl z-40 transition-transform duration-300 ease-out ${
+        className={`fixed left-0 top-0 h-screen w-64 bg-linear-to-b from-blue-50 to-blue-100 shadow-2xl z-40 transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -88,7 +81,6 @@ export default function Sidebar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  onClick={closeSidebar}
                   className={`block px-4 py-3 rounded-lg text-blue-900 font-medium hover:bg-blue-200 transition-all duration-200 transform hover:translate-x-1 ${
                     isOpen ? `animate-in fade-in slide-in-from-left-4` : ""
                   }`}

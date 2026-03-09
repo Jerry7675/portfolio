@@ -6,22 +6,31 @@ import SkillsPage from "../@skills/page";
 
 export default function ParallelSlots() {
   return (
-    <>
-      <section>
+    <div className="flex flex-col gap-6 w-full">
+      {/* Hero — full width */}
+      <div>
         <MainPage />
-      </section>
-      <section>
-        <AboutPage />
-      </section>
-      <section>
+      </div>
+
+      {/* About & Skills — side by side on md+ */}
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="md:w-2/3 w-full">
+          <AboutPage />
+        </div>
+        <div className="md:w-1/3 w-full">
+          <SkillsPage />
+        </div>
+      </div>
+
+      {/* Projects — full width */}
+      <div>
         <ProjectsPage />
-      </section>
-      <section>
-        <SkillsPage />
-      </section>
-      <section>
+      </div>
+
+      {/* Contact — full width */}
+      <div>
         <ContactPage />
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
