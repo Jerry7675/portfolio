@@ -9,7 +9,12 @@ export default function HeroSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="flex flex-col items-center text-center gap-10 pt-12 bg-white/90 dark:bg-zinc-900 rounded-2xl shadow-xl p-10 border border-blue-100"
+      className="flex flex-col items-center text-center gap-10 pt-12 rounded-2xl shadow-xl p-10 border"
+      style={{
+        background: "var(--background)",
+        color: "var(--foreground)",
+        borderColor: "var(--border)",
+      }}
     >
       {/* Profile Photo */}
       <motion.div
@@ -17,7 +22,8 @@ export default function HeroSection() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.7, ease: "backOut" }}
         viewport={{ once: true }}
-        className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 hover:border-blue-400 transition-colors duration-300"
+        className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 transition-colors duration-300"
+        style={{ borderColor: "var(--accent)" }}
       >
         <Image
           src="https://images.unsplash.com/photo-1570499995321-e2f9a3a3de5b?w=500&h=500&fit=crop"
@@ -28,7 +34,11 @@ export default function HeroSection() {
           priority
         />
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-blue-900/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+        {/* Subtle overlay for grayscale effect */}
+        <div
+          className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          style={{ background: "linear-gradient(to top, var(--shadow) 20%, transparent 100%)" }}
+        />
       </motion.div>
 
       {/* Main Heading */}
@@ -38,10 +48,13 @@ export default function HeroSection() {
         transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 leading-tight drop-shadow-sm">
+        <h1
+          className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm"
+          style={{ color: "var(--primary)" }}
+        >
           Jerry Sandesh
         </h1>
-        <p className="text-xl md:text-2xl text-blue-600 font-semibold mt-2">
+        <p className="text-xl md:text-2xl font-semibold mt-2" style={{ color: "var(--secondary)" }}>
           Full Stack Developer & Problem Solver
         </p>
       </motion.div>
@@ -54,13 +67,15 @@ export default function HeroSection() {
         viewport={{ once: true }}
         className="max-w-2xl space-y-4"
       >
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        <p className="text-lg md:text-xl leading-relaxed" style={{ color: "var(--primary)" }}>
           I build beautiful, scalable web applications that solve real problems. With expertise in
           modern web technologies, I craft seamless user experiences and robust backend solutions.
         </p>
-        <p className="text-base md:text-lg text-gray-600">
-          <span className="font-semibold text-blue-800">What I do:</span> Full-stack development,
-          UI/UX design, API integration, and cloud deployment
+        <p className="text-base md:text-lg" style={{ color: "var(--secondary)" }}>
+          <span className="font-semibold" style={{ color: "var(--primary)" }}>
+            What I do:
+          </span>{" "}
+          Full-stack development, UI/UX design, API integration, and cloud deployment
         </p>
       </motion.div>
 
@@ -76,17 +91,10 @@ export default function HeroSection() {
           href="#projects"
           whileHover={{ scale: 1.07 }}
           whileTap={{ scale: 0.97 }}
-          className="inline-block rounded-lg bg-blue-700 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-blue-800 hover:shadow-xl transition-all duration-200"
+          className="inline-block rounded-lg px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+          style={{ background: "var(--primary)", color: "var(--background)" }}
         >
-          View My Work
-        </motion.a>
-        <motion.a
-          href="/contact"
-          whileHover={{ scale: 1.07 }}
-          whileTap={{ scale: 0.97 }}
-          className="inline-block rounded-lg bg-white border-2 border-blue-700 px-8 py-4 text-lg font-semibold text-blue-700 shadow-lg hover:bg-blue-50 transition-all duration-200"
-        >
-          Get In Touch
+          View Projects
         </motion.a>
       </motion.div>
 

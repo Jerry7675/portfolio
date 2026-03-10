@@ -8,10 +8,17 @@ export default function ContactCTA() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-linear-to-br from-blue-100 to-blue-200 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl shadow-xl p-10 text-center border border-blue-100"
+      className="rounded-2xl shadow-xl p-10 text-center border"
+      style={{
+        background: "var(--background)",
+        color: "var(--foreground)",
+        borderColor: "var(--border)",
+      }}
     >
-      <h2 className="text-3xl font-extrabold mb-4 text-blue-900">Let’s Connect!</h2>
-      <p className="text-lg mb-6 text-blue-800 max-w-xl mx-auto">
+      <h2 className="text-3xl font-extrabold mb-4" style={{ color: "var(--primary)" }}>
+        Let’s Connect!
+      </h2>
+      <p className="text-lg mb-6 max-w-xl mx-auto" style={{ color: "var(--primary)" }}>
         Interested in collaborating, have a project in mind, or just want to chat about tech? I’m
         always open to new connections and opportunities.
       </p>
@@ -19,13 +26,21 @@ export default function ContactCTA() {
         href="/contact"
         whileHover={{ scale: 1.07 }}
         whileTap={{ scale: 0.97 }}
-        className="inline-block rounded-lg bg-blue-700 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-blue-800 transition"
+        className="inline-block rounded-lg px-8 py-3 text-lg font-semibold shadow-lg transition"
+        style={{
+          background: "var(--primary)",
+          color: "var(--background)",
+        }}
       >
         Contact Me
       </motion.a>
-      <div className="mt-6 text-blue-700 text-sm">
+      <div className="mt-6 text-sm" style={{ color: "var(--secondary)" }}>
         Or email me directly:{" "}
-        <a href="mailto:jerry.sandesh@email.com" className="underline hover:text-blue-900">
+        <a
+          href="mailto:jerry.sandesh@email.com"
+          className="underline"
+          style={{ color: "var(--primary)" }}
+        >
           jerry.sandesh@email.com
         </a>
       </div>
