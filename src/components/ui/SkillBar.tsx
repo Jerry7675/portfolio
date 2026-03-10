@@ -12,10 +12,20 @@ export default function SkillBar() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-white/90 dark:bg-zinc-900 rounded-2xl shadow-xl p-8 border border-blue-100"
+      className="rounded-2xl shadow-xl p-8 border"
+      style={{
+        background: "var(--background)",
+        color: "var(--foreground)",
+        borderColor: "var(--border)",
+      }}
     >
-      <h3 className="text-2xl font-bold mb-6 text-blue-900 text-center">My Top Skills</h3>
-      <p className="text-base text-blue-800 mb-8 text-center max-w-xl mx-auto">
+      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "var(--primary)" }}>
+        My Top Skills
+      </h3>
+      <p
+        className="text-base mb-8 text-center max-w-xl mx-auto"
+        style={{ color: "var(--primary)" }}
+      >
         Here’s a quick look at the technologies and tools I use most. I’m always learning and adding
         more to this list!
       </p>
@@ -30,12 +40,17 @@ export default function SkillBar() {
             className="flex flex-col gap-1"
           >
             <div className="flex justify-between items-center">
-              <span className="font-medium text-blue-800 text-lg">{skill.name}</span>
-              <span className="text-sm text-blue-500 font-semibold">{skill.level}</span>
+              <span className="font-medium text-lg" style={{ color: "var(--primary)" }}>
+                {skill.name}
+              </span>
+              <span className="text-sm font-semibold" style={{ color: "var(--secondary)" }}>
+                {skill.level}
+              </span>
             </div>
-            <div className="w-full bg-blue-100 dark:bg-zinc-800 rounded-full h-3">
+            <div className="w-full rounded-full h-3" style={{ background: "var(--accent)" }}>
               <motion.div
-                className="bg-blue-600 h-3 rounded-full"
+                className="h-3 rounded-full"
+                style={{ background: "var(--primary)" }}
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.percent}%` }}
                 transition={{ duration: 0.7, delay: idx * 0.08, ease: "easeOut" }}

@@ -13,10 +13,20 @@ export default function FeaturedProjects() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-white/90 dark:bg-zinc-900 rounded-2xl shadow-xl p-10 border border-blue-100"
+      className="rounded-2xl shadow-xl p-10 border"
+      style={{
+        background: "var(--background)",
+        color: "var(--foreground)",
+        borderColor: "var(--border)",
+      }}
     >
-      <h2 className="text-3xl font-extrabold mb-6 text-blue-900 text-center">Featured Projects</h2>
-      <p className="text-lg text-blue-800 mb-10 text-center max-w-2xl mx-auto">
+      <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: "var(--primary)" }}>
+        Featured Projects
+      </h2>
+      <p
+        className="text-lg mb-10 text-center max-w-2xl mx-auto"
+        style={{ color: "var(--primary)" }}
+      >
         Here are some of the projects I’m most proud of. Each one taught me something new and pushed
         my skills further.
       </p>
@@ -28,16 +38,26 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.15, duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="bg-linear-to-br from-blue-50 to-blue-100 dark:from-zinc-800 dark:to-zinc-900 rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-blue-100 hover:shadow-2xl hover:scale-[1.03] transition-transform duration-300"
+            className="rounded-xl shadow-lg p-6 flex flex-col gap-3 border hover:shadow-2xl hover:scale-[1.03] transition-transform duration-300"
+            style={{
+              background: "var(--background)",
+              color: "var(--foreground)",
+              borderColor: "var(--border)",
+            }}
           >
-            <h3 className="text-xl font-bold text-blue-800 mb-1">{project.title}</h3>
-            <p className="text-gray-700 dark:text-gray-200 flex-1">{project.description}</p>
+            <h3 className="text-xl font-bold mb-1" style={{ color: "var(--primary)" }}>
+              {project.title}
+            </h3>
+            <p className="flex-1" style={{ color: "var(--secondary)" }}>
+              {project.description}
+            </p>
             {project.tech && (
               <div className="flex flex-wrap gap-2 mt-2">
                 {project.tech.map((t: string) => (
                   <span
                     key={t}
-                    className="bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full font-medium"
+                    className="text-xs px-2 py-1 rounded-full font-medium"
+                    style={{ background: "var(--accent)", color: "var(--primary)" }}
                   >
                     {t}
                   </span>
@@ -49,7 +69,8 @@ export default function FeaturedProjects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 px-4 py-2 bg-blue-700 text-white rounded-lg font-semibold shadow hover:bg-blue-800 transition"
+                className="inline-block mt-4 px-4 py-2 rounded-lg font-semibold shadow transition"
+                style={{ background: "var(--primary)", color: "var(--background)" }}
               >
                 View Project
               </a>
