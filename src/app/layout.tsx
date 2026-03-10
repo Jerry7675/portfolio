@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layout/Sidebar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import FontComboClientWrapper from "@/components/ui/FontComboClientWrapper";
 
 export const metadata: Metadata = {
   title: "Jerry Sandesh | Full Stack Developer",
@@ -26,9 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="antialiased">
         <Sidebar />
-        {children}
+        {/* Font Combo Switcher UI */}
+        <FontComboClientWrapper>{children}</FontComboClientWrapper>
       </body>
     </html>
   );

@@ -32,21 +32,21 @@ export default function Sidebar() {
       <button
         type="button"
         onClick={toggleSidebar}
-        className="fixed top-6 left-6 z-50 flex flex-col gap-1.5 p-2 hover:bg-blue-100 rounded-lg transition-colors duration-200"
+        className="fixed top-6 left-6 z-50 flex flex-col gap-1.5 p-2 hover:bg-(--accent) rounded-lg transition-colors duration-200"
         aria-label="Toggle sidebar"
       >
         <span
-          className={`w-6 h-0.5 bg-blue-900 transition-all duration-300 block ${
+          className={`w-6 h-0.5 bg-(--primary) transition-all duration-300 block ${
             isOpen ? "rotate-45 translate-y-2" : ""
           }`}
         />
         <span
-          className={`w-6 h-0.5 bg-blue-900 transition-all duration-300 block ${
+          className={`w-6 h-0.5 bg-(--primary) transition-all duration-300 block ${
             isOpen ? "opacity-0" : "opacity-100"
           }`}
         />
         <span
-          className={`w-6 h-0.5 bg-blue-900 transition-all duration-300 block ${
+          className={`w-6 h-0.5 bg-(--primary) transition-all duration-300 block ${
             isOpen ? "-rotate-45 -translate-y-2" : ""
           }`}
         />
@@ -64,14 +64,15 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-64 bg-linear-to-b from-blue-50 to-blue-100 shadow-2xl z-40 transition-transform duration-300 ease-out ${
+        className={`fixed left-0 top-0 h-screen w-64 bg-(--background) shadow-2xl z-40 transition-transform duration-300 ease-out border-r border-(--border) ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
+        style={{ fontFamily: "var(--font-active)" }}
       >
         {/* Header */}
         <div className="pt-20 px-6 pb-8">
-          <h2 className="text-2xl font-bold text-blue-900">Jerry Sandesh</h2>
-          <p className="text-sm text-blue-700 mt-1">Full Stack Developer</p>
+          <h2 className="text-2xl font-bold text-(--primary)">Jerry Sandesh</h2>
+          <p className="text-sm text-(--secondary) mt-1">Full Stack Developer</p>
         </div>
 
         {/* Navigation Menu */}
@@ -81,7 +82,7 @@ export default function Sidebar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block px-4 py-3 rounded-lg text-blue-900 font-medium hover:bg-blue-200 transition-all duration-200 transform hover:translate-x-1 ${
+                  className={`block px-4 py-3 rounded-lg text-(--primary) font-medium hover:bg-(--accent) transition-all duration-200 transform hover:translate-x-1 ${
                     isOpen ? `animate-in fade-in slide-in-from-left-4` : ""
                   }`}
                   style={{
@@ -98,7 +99,7 @@ export default function Sidebar() {
 
         {/* Footer */}
         <div className="absolute bottom-6 left-0 right-0 px-6">
-          <p className="text-xs text-blue-600 text-center">
+          <p className="text-xs text-(--secondary) text-center">
             © 2026 Jerry Sandesh. All rights reserved.
           </p>
         </div>
