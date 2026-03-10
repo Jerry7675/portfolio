@@ -9,11 +9,15 @@ export default function HeroSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="flex flex-col items-center text-center gap-10 pt-12 rounded-2xl shadow-xl p-10 border"
+      className="flex flex-col items-center text-center gap-10 pt-12 w-full px-4 sm:px-8 py-12"
       style={{
-        background: "var(--background)",
-        color: "var(--foreground)",
-        borderColor: "var(--border)",
+        background: "linear-gradient(135deg, #f7f7f7 80%, #ededed 100%)",
+        color: "#232323",
+        borderRadius: 0,
+        boxShadow: "none",
+        border: "none",
+        minWidth: "100vw",
+        maxWidth: "100vw",
       }}
     >
       {/* Profile Photo */}
@@ -22,8 +26,8 @@ export default function HeroSection() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.7, ease: "backOut" }}
         viewport={{ once: true }}
-        className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl border-4 transition-colors duration-300"
-        style={{ borderColor: "var(--accent)" }}
+        className="relative w-48 h-48 md:w-56 md:h-56 overflow-hidden border-4 transition-colors duration-300"
+        style={{ borderColor: "var(--accent)", borderRadius: 0, boxShadow: "none" }}
       >
         <Image
           src="https://images.unsplash.com/photo-1570499995321-e2f9a3a3de5b?w=500&h=500&fit=crop"
@@ -50,11 +54,20 @@ export default function HeroSection() {
       >
         <h1
           className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm"
-          style={{ color: "var(--primary)" }}
+          style={{ color: "#111", textShadow: "0 2px 8px #ededed" }}
         >
           Jerry Sandesh
         </h1>
-        <p className="text-xl md:text-2xl font-semibold mt-2" style={{ color: "var(--secondary)" }}>
+        <p
+          className="text-xl md:text-2xl font-semibold mt-2"
+          style={{
+            color: "#232323",
+            background: "rgba(255,255,255,0.7)",
+            padding: "0.25em 0.75em",
+            borderRadius: "0.25em",
+            display: "inline-block",
+          }}
+        >
           Full Stack Developer & Problem Solver
         </p>
       </motion.div>
@@ -67,12 +80,12 @@ export default function HeroSection() {
         viewport={{ once: true }}
         className="max-w-2xl space-y-4"
       >
-        <p className="text-lg md:text-xl leading-relaxed" style={{ color: "var(--primary)" }}>
+        <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#232323" }}>
           I build beautiful, scalable web applications that solve real problems. With expertise in
           modern web technologies, I craft seamless user experiences and robust backend solutions.
         </p>
-        <p className="text-base md:text-lg" style={{ color: "var(--secondary)" }}>
-          <span className="font-semibold" style={{ color: "var(--primary)" }}>
+        <p className="text-base md:text-lg" style={{ color: "#666" }}>
+          <span className="font-semibold" style={{ color: "#232323" }}>
             What I do:
           </span>{" "}
           Full-stack development, UI/UX design, API integration, and cloud deployment
@@ -107,16 +120,28 @@ export default function HeroSection() {
         className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-blue-200 w-full"
       >
         <div className="text-center">
-          <p className="text-3xl font-bold text-blue-700">5+</p>
-          <p className="text-sm text-gray-600 mt-1">Years Experience</p>
+          <p className="text-3xl font-bold" style={{ color: "#232323" }}>
+            5+
+          </p>
+          <p className="text-sm mt-1" style={{ color: "#666" }}>
+            Years Experience
+          </p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold text-blue-700">20+</p>
-          <p className="text-sm text-gray-600 mt-1">Projects Completed</p>
+          <p className="text-3xl font-bold" style={{ color: "#232323" }}>
+            20+
+          </p>
+          <p className="text-sm mt-1" style={{ color: "#666" }}>
+            Projects Completed
+          </p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold text-blue-700">100%</p>
-          <p className="text-sm text-gray-600 mt-1">Client Satisfaction</p>
+          <p className="text-3xl font-bold" style={{ color: "#232323" }}>
+            100%
+          </p>
+          <p className="text-sm mt-1" style={{ color: "#666" }}>
+            Client Satisfaction
+          </p>
         </div>
       </motion.div>
     </motion.section>
