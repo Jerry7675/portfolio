@@ -13,19 +13,47 @@ export default function FeaturedProjects() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="rounded-2xl shadow-xl p-10 border"
+      className="w-full max-w-7xl mx-auto px-8 py-12 relative"
       style={{
-        background: "var(--background)",
-        color: "var(--foreground)",
-        borderColor: "var(--border)",
+        background: "linear-gradient(135deg, #f7f7f7 80%, #ededed 100%)",
+        color: "#232323",
+        borderRadius: 0,
+        boxShadow: "none",
+        border: "none",
       }}
     >
-      <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: "var(--primary)" }}>
+      {/* Optional background image overlay */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          background: "url('/your-background-image.jpg') center/cover no-repeat",
+          opacity: 0.12,
+          pointerEvents: "none",
+        }}
+      />
+
+      <h2
+        className="text-3xl font-extrabold mb-6 text-center"
+        style={{ color: "#111", textShadow: "0 2px 8px #ededed", position: "relative", zIndex: 1 }}
+      >
         Featured Projects
       </h2>
       <p
         className="text-lg mb-10 text-center max-w-2xl mx-auto"
-        style={{ color: "var(--primary)" }}
+        style={{
+          color: "#232323",
+          background: "rgba(255,255,255,0.7)",
+          padding: "0.25em 0.75em",
+          borderRadius: "0.25em",
+          display: "inline-block",
+          position: "relative",
+          zIndex: 1,
+        }}
       >
         Here are some of the projects I’m most proud of. Each one taught me something new and pushed
         my skills further.
@@ -38,17 +66,33 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.15, duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="rounded-xl shadow-lg p-6 flex flex-col gap-3 border hover:shadow-2xl hover:scale-[1.03] transition-transform duration-300"
+            className="p-6 flex flex-col gap-3 border transition-transform duration-300"
             style={{
-              background: "var(--background)",
-              color: "var(--foreground)",
-              borderColor: "var(--border)",
+              background: "rgba(255,255,255,0.85)",
+              color: "#232323",
+              borderColor: "#ededed",
+              borderRadius: 0,
+              boxShadow: "none",
+              position: "relative",
+              zIndex: 1,
             }}
           >
-            <h3 className="text-xl font-bold mb-1" style={{ color: "var(--primary)" }}>
+            <h3
+              className="text-xl font-bold mb-1"
+              style={{ color: "#111", textShadow: "0 2px 8px #ededed" }}
+            >
               {project.title}
             </h3>
-            <p className="flex-1" style={{ color: "var(--secondary)" }}>
+            <p
+              className="flex-1"
+              style={{
+                color: "#232323",
+                background: "rgba(255,255,255,0.7)",
+                padding: "0.25em 0.75em",
+                borderRadius: "0.25em",
+                display: "inline-block",
+              }}
+            >
               {project.description}
             </p>
             {project.tech && (
@@ -57,7 +101,7 @@ export default function FeaturedProjects() {
                   <span
                     key={t}
                     className="text-xs px-2 py-1 rounded-full font-medium"
-                    style={{ background: "var(--accent)", color: "var(--primary)" }}
+                    style={{ background: "#ededed", color: "#232323" }}
                   >
                     {t}
                   </span>

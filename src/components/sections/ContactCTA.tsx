@@ -8,17 +8,19 @@ export default function ContactCTA() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="rounded-2xl shadow-xl p-10 text-center border"
+      className="w-full max-w-7xl mx-auto text-center px-8 py-12"
       style={{
-        background: "var(--background)",
-        color: "var(--foreground)",
-        borderColor: "var(--border)",
+        background: "linear-gradient(135deg, #f7f7f7 80%, #ededed 100%)",
+        color: "#232323",
+        borderRadius: 0,
+        boxShadow: "none",
+        border: "none",
       }}
     >
-      <h2 className="text-3xl font-extrabold mb-4" style={{ color: "var(--primary)" }}>
+      <h2 className="text-3xl font-extrabold mb-4" style={{ color: "#232323" }}>
         Let’s Connect!
       </h2>
-      <p className="text-lg mb-6 max-w-xl mx-auto" style={{ color: "var(--primary)" }}>
+      <p className="text-lg mb-6 max-w-xl mx-auto" style={{ color: "#444" }}>
         Interested in collaborating, have a project in mind, or just want to chat about tech? I’m
         always open to new connections and opportunities.
       </p>
@@ -28,19 +30,15 @@ export default function ContactCTA() {
         whileTap={{ scale: 0.97 }}
         className="inline-block rounded-lg px-8 py-3 text-lg font-semibold shadow-lg transition"
         style={{
-          background: "var(--primary)",
-          color: "var(--background)",
+          background: "#232323",
+          color: "#fff",
         }}
       >
         Contact Me
       </motion.a>
-      <div className="mt-6 text-sm" style={{ color: "var(--secondary)" }}>
+      <div className="mt-6 text-sm" style={{ color: "#666" }}>
         Or email me directly:{" "}
-        <a
-          href="mailto:jerry.sandesh@email.com"
-          className="underline"
-          style={{ color: "var(--primary)" }}
-        >
+        <a href="mailto:jerry.sandesh@email.com" className="underline" style={{ color: "#232323" }}>
           jerry.sandesh@email.com
         </a>
       </div>

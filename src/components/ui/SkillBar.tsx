@@ -12,20 +12,19 @@ export default function SkillBar() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="rounded-2xl shadow-xl p-8 border"
+      className="w-full max-w-7xl mx-auto px-8 py-12"
       style={{
-        background: "var(--background)",
-        color: "var(--foreground)",
-        borderColor: "var(--border)",
+        background: "linear-gradient(135deg, #f7f7f7 80%, #ededed 100%)",
+        color: "#232323",
+        borderRadius: 0,
+        boxShadow: "none",
+        border: "none",
       }}
     >
-      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "var(--primary)" }}>
+      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#232323" }}>
         My Top Skills
       </h3>
-      <p
-        className="text-base mb-8 text-center max-w-xl mx-auto"
-        style={{ color: "var(--primary)" }}
-      >
+      <p className="text-base mb-8 text-center max-w-xl mx-auto" style={{ color: "#444" }}>
         Here’s a quick look at the technologies and tools I use most. I’m always learning and adding
         more to this list!
       </p>
@@ -40,10 +39,10 @@ export default function SkillBar() {
             className="flex flex-col gap-1"
           >
             <div className="flex justify-between items-center">
-              <span className="font-medium text-lg" style={{ color: "var(--primary)" }}>
+              <span className="font-medium text-lg" style={{ color: "#232323" }}>
                 {skill.name}
               </span>
-              <span className="text-sm font-semibold" style={{ color: "var(--secondary)" }}>
+              <span className="text-sm font-semibold" style={{ color: "#666" }}>
                 {skill.level}
               </span>
             </div>
