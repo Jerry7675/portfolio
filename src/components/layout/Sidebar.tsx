@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSidebarStore } from "@/store/sidebarStore";
+import FontComboSwitcher from "../ui/FontComboSwitcher";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -97,6 +98,10 @@ export default function Sidebar() {
           </ul>
         </nav>
 
+        {/* Font Switcher */}
+        <div className="px-6 pb-4">
+          <FontComboSwitcher />
+        </div>
         {/* Footer */}
         <div className="absolute bottom-6 left-0 right-0 px-6">
           <p className="text-xs text-(--secondary) text-center">

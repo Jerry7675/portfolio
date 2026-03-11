@@ -9,24 +9,32 @@ export default function HeroSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="flex flex-col items-center text-center gap-10 pt-12 w-full px-4 sm:px-8 py-12"
+      className="relative overflow-hidden w-full flex flex-col items-center text-center gap-10 pt-12 px-4 sm:px-8 py-12"
       style={{
-        background: "linear-gradient(135deg, #f7f7f7 80%, #ededed 100%)",
         color: "#232323",
         borderRadius: 0,
         boxShadow: "none",
         border: "none",
-        minWidth: "100vw",
-        maxWidth: "100vw",
       }}
     >
+      {/* Background image overlay */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full"
+        style={{
+          background: `linear-gradient(135deg, #f7f7f7cc 80%, #edededcc 100%), url('/black-white-background.jpg') center/cover no-repeat`,
+          filter: "grayscale(1)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
       {/* Profile Photo */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.7, ease: "backOut" }}
         viewport={{ once: true }}
-        className="relative w-48 h-48 md:w-56 md:h-56 overflow-hidden border-4 transition-colors duration-300"
+        className="relative w-48 h-48 md:w-56 md:h-56 overflow-hidden border-4 transition-colors duration-300 z-10 mx-auto"
         style={{ borderColor: "var(--accent)", borderRadius: 0, boxShadow: "none" }}
       >
         <Image
@@ -44,13 +52,13 @@ export default function HeroSection() {
           style={{ background: "linear-gradient(to top, var(--shadow) 20%, transparent 100%)" }}
         />
       </motion.div>
-
       {/* Main Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
+        className="z-10 w-full flex flex-col items-center"
       >
         <h1
           className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm"
@@ -71,14 +79,13 @@ export default function HeroSection() {
           Full Stack Developer & Problem Solver
         </p>
       </motion.div>
-
       {/* Summary */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="max-w-2xl space-y-4"
+        className="max-w-2xl space-y-4 z-10 w-full mx-auto"
       >
         <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#232323" }}>
           I build beautiful, scalable web applications that solve real problems. With expertise in
@@ -91,14 +98,13 @@ export default function HeroSection() {
           Full-stack development, UI/UX design, API integration, and cloud deployment
         </p>
       </motion.div>
-
       {/* CTA Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="flex flex-col sm:flex-row gap-4 mt-8"
+        className="flex flex-col sm:flex-row gap-4 mt-8 z-10 w-full justify-center items-center"
       >
         <motion.a
           href="#projects"
@@ -110,14 +116,13 @@ export default function HeroSection() {
           View Projects
         </motion.a>
       </motion.div>
-
       {/* Stats / Quick Info */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-blue-200 w-full"
+        className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 pt-8 border-t border-blue-200 w-full z-10 mx-auto"
       >
         <div className="text-center">
           <p className="text-3xl font-bold" style={{ color: "#232323" }}>
