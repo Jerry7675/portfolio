@@ -17,9 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Sidebar />
-        {/* Font Combo Switcher UI */}
-        <FontComboClientWrapper>{children}</FontComboClientWrapper>
+        <FontComboClientWrapper>
+          <Sidebar />
+          {children}
+        </FontComboClientWrapper>
       </body>
     </html>
   );
