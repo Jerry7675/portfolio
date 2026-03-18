@@ -58,9 +58,10 @@ export default function Sidebar() {
       {isOpen && (
         <button
           type="button"
-          className="fixed inset-0 bg-black/40 z-30 transition-opacity duration-300 animate-in fade-in cursor-default"
+          className="fixed inset-0 z-30 transition-opacity duration-300 animate-in fade-in cursor-default"
           onClick={closeSidebar}
           aria-label="Close sidebar"
+          style={{ background: "var(--overlay)" }}
         />
       )}
 

@@ -11,7 +11,7 @@ export default function HeroSection() {
       viewport={{ once: true }}
       className="relative overflow-hidden w-full flex flex-col items-center text-center gap-10 pt-12 px-4 sm:px-8 py-12"
       style={{
-        color: "#232323",
+        color: "var(--foreground)",
         borderRadius: 0,
         boxShadow: "none",
         border: "none",
@@ -22,7 +22,7 @@ export default function HeroSection() {
         aria-hidden="true"
         className="absolute inset-0 w-full h-full"
         style={{
-          background: `linear-gradient(135deg, #f7f7f7cc 80%, #edededcc 100%), url('/black-white-background.jpg') center/cover no-repeat`,
+          background: `linear-gradient(135deg, var(--background) 80%, var(--surface) 100%), url('/black-white-background.jpg') center/cover no-repeat`,
           filter: "grayscale(1)",
           pointerEvents: "none",
           zIndex: 0,
@@ -62,15 +62,15 @@ export default function HeroSection() {
       >
         <h1
           className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm"
-          style={{ color: "#111", textShadow: "0 2px 8px #ededed" }}
+          style={{ color: "var(--primary)", textShadow: "0 2px 8px var(--shadow)" }}
         >
           Jerry Sandesh
         </h1>
         <p
           className="text-xl md:text-2xl font-semibold mt-2"
           style={{
-            color: "#232323",
-            background: "rgba(255,255,255,0.7)",
+            color: "var(--foreground)",
+            background: "var(--surface)",
             padding: "0.25em 0.75em",
             borderRadius: "0.25em",
             display: "inline-block",
@@ -87,12 +87,12 @@ export default function HeroSection() {
         viewport={{ once: true }}
         className="max-w-2xl space-y-4 z-10 w-full mx-auto"
       >
-        <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#232323" }}>
+        <p className="text-lg md:text-xl leading-relaxed" style={{ color: "var(--foreground)" }}>
           I build beautiful, scalable web applications that solve real problems. With expertise in
           modern web technologies, I craft seamless user experiences and robust backend solutions.
         </p>
-        <p className="text-base md:text-lg" style={{ color: "#666" }}>
-          <span className="font-semibold" style={{ color: "#232323" }}>
+        <p className="text-base md:text-lg" style={{ color: "var(--muted)" }}>
+          <span className="font-semibold" style={{ color: "var(--foreground)" }}>
             What I do:
           </span>{" "}
           Full-stack development, UI/UX design, API integration, and cloud deployment
@@ -122,29 +122,30 @@ export default function HeroSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 pt-8 border-t border-blue-200 w-full z-10 mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 pt-8 border-t w-full z-10 mx-auto"
+        style={{ borderColor: "var(--border)" }}
       >
         <div className="text-center">
-          <p className="text-3xl font-bold" style={{ color: "#232323" }}>
+          <p className="text-3xl font-bold" style={{ color: "var(--primary)" }}>
             5+
           </p>
-          <p className="text-sm mt-1" style={{ color: "#666" }}>
+          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
             Years Experience
           </p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold" style={{ color: "#232323" }}>
+          <p className="text-3xl font-bold" style={{ color: "var(--primary)" }}>
             20+
           </p>
-          <p className="text-sm mt-1" style={{ color: "#666" }}>
+          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
             Projects Completed
           </p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold" style={{ color: "#232323" }}>
+          <p className="text-3xl font-bold" style={{ color: "var(--primary)" }}>
             100%
           </p>
-          <p className="text-sm mt-1" style={{ color: "#666" }}>
+          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
             Client Satisfaction
           </p>
         </div>
