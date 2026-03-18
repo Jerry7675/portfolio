@@ -64,4 +64,40 @@ export const THEME_COMBOS = {
       "--shadow": "#6ee7b7",
     },
   },
+  autumn: {
+    label: "Autumn",
+    vars: {
+      "--background": "#fff7ed",
+      "--foreground": "#422006",
+      "--accent": "#f97316",
+      "--primary": "#9a3412",
+      "--secondary": "#7c2d12",
+      "--border": "#fcd34d",
+      "--shadow": "#fb923c",
+    },
+  },
+  midnight: {
+    label: "Midnight",
+    vars: {
+      "--background": "#060b14",
+      "--foreground": "#e2e8f0",
+      "--accent": "#5b21b6",
+      "--primary": "#cbd5e1",
+      "--secondary": "#94a3b8",
+      "--border": "#1e293b",
+      "--shadow": "#0f172a",
+    },
+  },
+  spring: {
+    label: "Spring",
+    vars: {
+      "--background": "#f0fdf4",
+      "--foreground": "#064e3b",
+      "--accent": "#22c55e",
+      "--primary": "#14532d",
+      "--secondary": "#166534",
+      "--border": "#a7f3d0",
+      "--shadow": "#4ade80",
+    },
+  },
 };
