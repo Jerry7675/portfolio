@@ -15,8 +15,8 @@ export default function FeaturedProjects() {
       viewport={{ once: true }}
       className="w-full max-w-7xl mx-auto px-8 py-12 relative"
       style={{
-        background: "linear-gradient(135deg, #f7f7f7 80%, #ededed 100%)",
-        color: "#232323",
+        background: "linear-gradient(135deg, var(--background) 80%, var(--surface) 100%)",
+        color: "var(--foreground)",
         borderRadius: 0,
         boxShadow: "none",
         border: "none",
@@ -39,15 +39,20 @@ export default function FeaturedProjects() {
 
       <h2
         className="text-3xl font-extrabold mb-6 text-center"
-        style={{ color: "#111", textShadow: "0 2px 8px #ededed", position: "relative", zIndex: 1 }}
+        style={{
+          color: "var(--primary)",
+          textShadow: "0 2px 8px var(--shadow)",
+          position: "relative",
+          zIndex: 1,
+        }}
       >
         Featured Projects
       </h2>
       <p
         className="text-lg mb-10 text-center max-w-2xl mx-auto"
         style={{
-          color: "#232323",
-          background: "rgba(255,255,255,0.7)",
+          color: "var(--muted)",
+          background: "var(--surface)",
           padding: "0.25em 0.75em",
           borderRadius: "0.25em",
           display: "inline-block",
@@ -68,9 +73,9 @@ export default function FeaturedProjects() {
             viewport={{ once: true }}
             className="p-6 flex flex-col gap-3 border transition-transform duration-300"
             style={{
-              background: "rgba(255,255,255,0.85)",
-              color: "#232323",
-              borderColor: "#ededed",
+              background: "var(--surface)",
+              color: "var(--foreground)",
+              borderColor: "var(--surface-border)",
               borderRadius: 0,
               boxShadow: "none",
               position: "relative",
@@ -79,15 +84,15 @@ export default function FeaturedProjects() {
           >
             <h3
               className="text-xl font-bold mb-1"
-              style={{ color: "#111", textShadow: "0 2px 8px #ededed" }}
+              style={{ color: "var(--primary)", textShadow: "0 2px 8px var(--shadow)" }}
             >
               {project.title}
             </h3>
             <p
               className="flex-1"
               style={{
-                color: "#232323",
-                background: "rgba(255,255,255,0.7)",
+                color: "var(--muted)",
+                background: "var(--surface)",
                 padding: "0.25em 0.75em",
                 borderRadius: "0.25em",
                 display: "inline-block",
@@ -101,7 +106,7 @@ export default function FeaturedProjects() {
                   <span
                     key={t}
                     className="text-xs px-2 py-1 rounded-full font-medium"
-                    style={{ background: "#ededed", color: "#232323" }}
+                    style={{ background: "var(--surface)", color: "var(--foreground)" }}
                   >
                     {t}
                   </span>
