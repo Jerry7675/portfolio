@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "title": "AI Debate Platform",
+    "description": "A debate system where two AI agents argue opposite viewpoints on user-submitted topics and a judge evaluates context to declare a winner.",
+    "tech": ["React", "Socket.IO", "Python", "Ollama", "Mistral 7B", "DeepSeek"],
+    "link": "https://github.com/Jerry7675/ai-debate-platform"
+  },
+  {
+    "title": "Patient Management System",
+    "description": "Healthcare app for recording patient visits, medicine updates, and medical history management in real-time.",
+    "tech": ["React", "Firebase", "Tailwind CSS"],
+    "link": "https://github.com/Jerry7675/patient-management-system"
+  },
+  {
+    "title": "Ecommerce Mobile App",
+    "description": "Full e-commerce stack with payment integration (Khalti, eSewa), order flow, and REST API backend.",
+    "tech": ["Expo", "React Native", "Node.js", "Express", "MongoDB", "Stripe"],
+    "link": "https://github.com/Jerry7675/ecommerce-mobile-app"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Personal portfolio website showcasing projects, skills, and experience.",
+    "tech": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    "link": "https://github.com/Jerry7675/portfolio"
+  }
+]

@@ -20,7 +20,7 @@ export default function AboutSnippet() {
     >
       <div className="shrink-0">
         <Image
-          src="https://images.unsplash.com/photo-1570499995321-e2f9a3a3de5b?w=200&h=200&fit=crop"
+          src="/sandeshPhoto.png"
           alt="Jerry Sandesh portrait"
           width={120}
           height={120}
@@ -34,18 +34,37 @@ export default function AboutSnippet() {
         </h2>
         <p className="text-lg leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
           <span className="font-semibold" style={{ color: "var(--foreground)" }}>
-            Full Stack Developer
+            Full-Stack JavaScript Developer
           </span>{" "}
-          passionate about building impactful digital experiences.
+          specializing in React, Next.js, TypeScript, NestJS, Prisma, and cross-platform mobile
+          apps.
+        </p>
+        <p className="text-base leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
+          I bring a strong blend of frontend craftsmanship and backend reliability. My day-to-day
+          work includes building optimized user interfaces, writing clean API services, and ensuring
+          smooth client-server interactions with resilient authentication and data handling.
         </p>
         <ul className="list-disc pl-5 space-y-1 text-base" style={{ color: "var(--foreground)" }}>
-          <li>Bridging design & engineering for delightful UIs</li>
-          <li>Crafting robust backends & scalable systems</li>
-          <li>Always learning, always building</li>
+          <li>Bridging design & engineering for delightful UIs with pixel-perfect layouts</li>
+          <li>Crafting robust backends and scalable microservices for real-time app flows</li>
+          <li>
+            Writing secure, maintainable code with tests, linting & standard style across teams
+          </li>
+          <li>Mentoring juniors, performing code reviews, and collaborating across Agile teams</li>
         </ul>
         <p className="mt-4 text-base" style={{ color: "var(--muted)" }}>
-          When I’m not coding, you’ll find me exploring new tech, sketching ideas, or hiking in
-          nature.
+          Key achievements:
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-base" style={{ color: "var(--foreground" }}>
+          <li>
+            Delivered a production Yeti Nepal app using Next.js and NestJS with full JWT security.
+          </li>
+          <li>Implemented an automated CI/CD pipeline to reduce deployment friction by 30%.</li>
+          <li>Built mobile experiences in Expo for cross-platform Android/iOS use.</li>
+        </ul>
+        <p className="mt-4 text-base" style={{ color: "var(--muted)" }}>
+          Outside work, I enjoy tech blogging, learning machine learning model integration, and
+          contributing to open-source utilities for developer productivity.
         </p>
       </div>
     </motion.div>

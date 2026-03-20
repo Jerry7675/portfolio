@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "company": "Yeti Nepal",
+    "position": "Junior Full-Stack Developer",
+    "duration": "Nov 2025 - Mar 2026",
+    "location": "Pokhara, Nepal",
+    "details": [
+      "Developed and maintained production web applications using React, Next.js, and TypeScript.",
+      "Built REST APIs with NestJS and Express, incorporating JWT authentication.",
+      "Integrated PostgreSQL and MongoDB using Prisma ORM.",
+      "Assisted deployment workflows and resolved CI/CD issues."
+    ]
+  },
+  {
+    "company": "Yeti Nepal",
+    "position": "Frontend & Mobile Intern",
+    "duration": "Jun 2025 - Oct 2025",
+    "location": "Pokhara, Nepal",
+    "details": [
+      "Built responsive UI components using React and Tailwind CSS.",
+      "Developed cross-platform mobile screens using Expo.",
+      "Connected frontend applications to backend APIs and collaborated in Agile sprints."
+    ]
+  }
+]

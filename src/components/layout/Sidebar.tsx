@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSidebarStore } from "@/store/sidebarStore";
@@ -73,9 +74,16 @@ export default function Sidebar() {
         style={{ fontFamily: "var(--font-active)" }}
       >
         {/* Header */}
-        <div className="pt-20 px-6 pb-8">
+        <div className="pt-20 px-6 pb-8 flex flex-col items-center gap-3">
+          <Image
+            src="/sandeshPhoto.png"
+            alt="Jerry Sandesh profile"
+            width={96}
+            height={96}
+            className="rounded-full border-2 border-(--accent) object-cover"
+          />
           <h2 className="text-2xl font-bold text-(--primary)">Jerry Sandesh</h2>
-          <p className="text-sm text-(--secondary) mt-1">Full Stack Developer</p>
+          <p className="text-sm text-(--secondary)">Full Stack Developer</p>
         </div>
 
         {/* Navigation Menu */}
