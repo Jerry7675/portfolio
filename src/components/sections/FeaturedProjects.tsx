@@ -31,7 +31,7 @@ export default function FeaturedProjects() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          background: "url('/your-background-image.jpg') center/cover no-repeat",
+          background: "src('../../../public/black-white-background.jpg') center/cover no-repeat",
           opacity: 0.12,
           pointerEvents: "none",
         }}

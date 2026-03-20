@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { createContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useEffect, useMemo, useState } from "react";
 import { THEME_COMBOS, type ThemeComboType } from "@/styles/themes";
 
 const LOCAL_STORAGE_KEY = "portfolio-theme";
@@ -48,12 +48,12 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<ThemeComboType>("default");
   const [isUserSet, setIsUserSet] = useState(false);
 
-  const setTheme = (next: ThemeComboType) => {
+  const setTheme = useCallback((next: ThemeComboType) => {
     setThemeState(next);
     setIsUserSet(true);
     window.localStorage.setItem(LOCAL_STORAGE_KEY, next);
     window.localStorage.setItem(LOCAL_STORAGE_USER_SET_KEY, "true");
-  };
+  }, []);
 
   useEffect(() => {
     const stored = window.localStorage.getItem(LOCAL_STORAGE_KEY) as ThemeComboType | null;
@@ -91,7 +91,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     return () => window.clearInterval(interval);
   }, [isUserSet, theme]);
 
-  const value = useMemo(() => ({ theme, setTheme, themes: THEME_COMBOS }), [theme]);
+  const value = useMemo(() => ({ theme, setTheme, themes: THEME_COMBOS }), [theme, setTheme]);
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }

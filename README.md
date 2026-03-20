@@ -65,6 +65,7 @@ yarn dev
 ## 📝 Customization
 
 - Update your profile and content in `src/data/`
+- Profile image is now managed as a local asset in `public/sandeshPhoto.png`; replace this file to update the site photo.
 - Adjust styles in `src/app/globals.css` and component files
 - Add or remove sections by editing components in `src/components/sections/`
 

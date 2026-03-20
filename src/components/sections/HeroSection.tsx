@@ -34,15 +34,15 @@ export default function HeroSection() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.7, ease: "backOut" }}
         viewport={{ once: true }}
-        className="relative w-48 h-48 md:w-56 md:h-56 overflow-hidden border-4 transition-colors duration-300 z-10 mx-auto"
-        style={{ borderColor: "var(--accent)", borderRadius: 0, boxShadow: "none" }}
+        className="relative w-48 h-48 md:w-56 md:h-56 overflow-hidden border-4 rounded-full transition-colors duration-300 z-10 mx-auto"
+        style={{ borderColor: "var(--accent)", borderRadius: "9999px", boxShadow: "none" }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1570499995321-e2f9a3a3de5b?w=500&h=500&fit=crop"
-          alt="Jerry Sandesh Profile"
+          src="/sandeshPhoto.png"
+          alt="Jerry Sandesh headshot"
           width={224}
           height={224}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-full"
           priority
         />
         {/* Animated gradient overlay */}
@@ -64,7 +64,7 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm"
           style={{ color: "var(--primary)", textShadow: "0 2px 8px var(--shadow)" }}
         >
-          Jerry Sandesh
+          Chhetri Sandesh Poudel
         </h1>
         <p
           className="text-xl md:text-2xl font-semibold mt-2"
@@ -76,7 +76,7 @@ export default function HeroSection() {
             display: "inline-block",
           }}
         >
-          Full Stack Developer & Problem Solver
+          Full-Stack JS Developer (Web & Mobile)
         </p>
       </motion.div>
       {/* Summary */}

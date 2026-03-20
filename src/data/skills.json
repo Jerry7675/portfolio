@@ -1,1 +1,13 @@
-[]
+[
+  { "name": "React", "level": "Advanced", "percent": 80 },
+  { "name": "Next.js", "level": "Proficient", "percent": 75 },
+  { "name": "TypeScript", "level": "Advanced", "percent": 70 },
+  { "name": "JavaScript", "level": "Advanced", "percent": 85 },
+  { "name": "Tailwind CSS", "level": "Advanced", "percent": 85 },
+  { "name": "Node.js", "level": "Advanced", "percent": 85 },
+  { "name": "NestJS", "level": "Proficient", "percent": 80 },
+  { "name": "PostgreSQL", "level": "Intermediate", "percent": 60 },
+  { "name": "MongoDB", "level": "Advanced", "percent": 80 },
+  { "name": "Prisma", "level": "Proficient", "percent": 80 },
+  { "name": "Expo (React Native)", "level": "Proficient", "percent": 70 }
+]
