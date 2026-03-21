@@ -17,10 +17,8 @@ export default function ContactCTA() {
         border: "none",
       }}
     >
-      <h2 className="text-3xl font-extrabold mb-4" style={{ color: "var(--primary)" }}>
-        Let’s Connect!
-      </h2>
-      <p className="text-lg mb-6 max-w-xl mx-auto" style={{ color: "var(--muted)" }}>
+      <h2 className="text-3xl font-extrabold mb-4 text-primary">Let’s Connect!</h2>
+      <p className="text-lg mb-6 max-w-xl mx-auto text-muted">
         Interested in collaborating, have a project in mind, or just want to chat about tech? I’m
         always open to new connections and opportunities.
       </p>
@@ -28,22 +26,13 @@ export default function ContactCTA() {
         href="/contact"
         whileHover={{ scale: 1.07 }}
         whileTap={{ scale: 0.97 }}
-        className="inline-block rounded-lg px-8 py-3 text-lg font-semibold shadow-lg transition"
-        style={{
-          background: "var(--button-bg)",
-          color: "var(--button-text)",
-          border: "1px solid var(--button-border)",
-        }}
+        className="inline-block rounded-lg px-8 py-3 text-lg font-semibold shadow-lg transition btn-primary"
       >
         Contact Me
       </motion.a>
-      <div className="mt-6 text-sm" style={{ color: "var(--muted)" }}>
+      <div className="mt-6 text-sm text-muted">
         Or email me directly:{" "}
-        <a
-          href="mailto:jerry.sandesh@email.com"
-          className="underline"
-          style={{ color: "var(--link)" }}
-        >
+        <a href="mailto:jerry.sandesh@email.com" className="underline text-link">
           jerry.sandesh@email.com
         </a>
       </div>

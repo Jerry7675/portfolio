@@ -60,22 +60,10 @@ export default function HeroSection() {
         viewport={{ once: true }}
         className="z-10 w-full flex flex-col items-center"
       >
-        <h1
-          className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm"
-          style={{ color: "var(--primary)", textShadow: "0 2px 8px var(--shadow)" }}
-        >
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-sm text-primary">
           Chhetri Sandesh Poudel
         </h1>
-        <p
-          className="text-xl md:text-2xl font-semibold mt-2"
-          style={{
-            color: "var(--foreground)",
-            background: "var(--surface)",
-            padding: "0.25em 0.75em",
-            borderRadius: "0.25em",
-            display: "inline-block",
-          }}
-        >
+        <p className="text-xl md:text-2xl font-semibold mt-2 text-foreground bg-surface px-3 py-1 rounded">
           Full-Stack JS Developer (Web & Mobile)
         </p>
       </motion.div>
@@ -87,15 +75,13 @@ export default function HeroSection() {
         viewport={{ once: true }}
         className="max-w-2xl space-y-4 z-10 w-full mx-auto"
       >
-        <p className="text-lg md:text-xl leading-relaxed" style={{ color: "var(--foreground)" }}>
+        <p className="text-lg md:text-xl leading-relaxed text-foreground">
           I build beautiful, scalable web applications that solve real problems. With expertise in
           modern web technologies, I craft seamless user experiences and robust backend solutions.
         </p>
-        <p className="text-base md:text-lg" style={{ color: "var(--muted)" }}>
-          <span className="font-semibold" style={{ color: "var(--foreground)" }}>
-            What I do:
-          </span>{" "}
-          Full-stack development, UI/UX design, API integration, and cloud deployment
+        <p className="text-base md:text-lg text-muted">
+          <span className="font-semibold text-foreground">What I do:</span> Full-stack development,
+          UI/UX design, API integration, and cloud deployment
         </p>
       </motion.div>
       {/* CTA Buttons */}
@@ -126,28 +112,16 @@ export default function HeroSection() {
         style={{ borderColor: "var(--border)" }}
       >
         <div className="text-center">
-          <p className="text-3xl font-bold" style={{ color: "var(--primary)" }}>
-            5+
-          </p>
-          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
-            Years Experience
-          </p>
+          <p className="text-3xl font-bold text-primary">5+</p>
+          <p className="text-sm mt-1 text-muted">Years Experience</p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold" style={{ color: "var(--primary)" }}>
-            20+
-          </p>
-          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
-            Projects Completed
-          </p>
+          <p className="text-3xl font-bold text-primary">20+</p>
+          <p className="text-sm mt-1 text-muted">Projects Completed</p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold" style={{ color: "var(--primary)" }}>
-            100%
-          </p>
-          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
-            Client Satisfaction
-          </p>
+          <p className="text-3xl font-bold text-primary">100%</p>
+          <p className="text-sm mt-1 text-muted">Client Satisfaction</p>
         </div>
       </motion.div>
     </motion.section>

@@ -38,27 +38,14 @@ export default function FeaturedProjects() {
       />
 
       <h2
-        className="text-3xl font-extrabold mb-6 text-center"
-        style={{
-          color: "var(--primary)",
-          textShadow: "0 2px 8px var(--shadow)",
-          position: "relative",
-          zIndex: 1,
-        }}
+        className="text-3xl font-extrabold mb-6 text-center text-primary"
+        style={{ textShadow: "0 2px 8px var(--shadow)", position: "relative", zIndex: 1 }}
       >
         Featured Projects
       </h2>
       <p
-        className="text-lg mb-10 text-center max-w-2xl mx-auto"
-        style={{
-          color: "var(--muted)",
-          background: "var(--surface)",
-          padding: "0.25em 0.75em",
-          borderRadius: "0.25em",
-          display: "inline-block",
-          position: "relative",
-          zIndex: 1,
-        }}
+        className="text-lg mb-10 text-center max-w-2xl mx-auto text-muted bg-surface px-3 py-1 rounded inline-block"
+        style={{ position: "relative", zIndex: 1 }}
       >
         Here are some of the projects I’m most proud of. Each one taught me something new and pushed
         my skills further.
@@ -71,33 +58,16 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.15, duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="p-6 flex flex-col gap-3 border transition-transform duration-300"
-            style={{
-              background: "var(--surface)",
-              color: "var(--foreground)",
-              borderColor: "var(--surface-border)",
-              borderRadius: 0,
-              boxShadow: "none",
-              position: "relative",
-              zIndex: 1,
-            }}
+            className="p-6 flex flex-col gap-3 border border-surface-border bg-surface text-foreground shadow-surface transition-transform duration-300"
+            style={{ position: "relative", zIndex: 1 }}
           >
             <h3
-              className="text-xl font-bold mb-1"
-              style={{ color: "var(--primary)", textShadow: "0 2px 8px var(--shadow)" }}
+              className="text-xl font-bold mb-1 text-primary"
+              style={{ textShadow: "0 2px 8px var(--shadow)" }}
             >
               {project.title}
             </h3>
-            <p
-              className="flex-1"
-              style={{
-                color: "var(--muted)",
-                background: "var(--surface)",
-                padding: "0.25em 0.75em",
-                borderRadius: "0.25em",
-                display: "inline-block",
-              }}
-            >
+            <p className="flex-1 text-muted bg-surface px-3 py-1 rounded inline-block">
               {project.description}
             </p>
             {project.tech && (
@@ -105,8 +75,7 @@ export default function FeaturedProjects() {
                 {project.tech.map((t: string) => (
                   <span
                     key={t}
-                    className="text-xs px-2 py-1 rounded-full font-medium"
-                    style={{ background: "var(--surface)", color: "var(--foreground)" }}
+                    className="text-xs px-2 py-1 rounded-full font-medium bg-surface text-foreground"
                   >
                     {t}
                   </span>
@@ -118,8 +87,7 @@ export default function FeaturedProjects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 px-4 py-2 rounded-lg font-semibold shadow transition"
-                style={{ background: "var(--primary)", color: "var(--background)" }}
+                className="inline-block mt-4 px-4 py-2 rounded-lg font-semibold shadow transition btn-primary"
               >
                 View Project
               </a>

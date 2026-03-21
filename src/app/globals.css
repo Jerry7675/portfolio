@@ -68,6 +68,22 @@
 html {
   overflow-x: hidden;
 }
+
+/* Theme-aware typographic utilities */
+.text-foreground { color: var(--foreground) !important; }
+.text-muted { color: var(--muted) !important; }
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-link { color: var(--link) !important; }
+.text-link:hover { color: var(--link-hover) !important; }
+
+.bg-surface { background: var(--surface) !important; }
+.border-surface { border-color: var(--surface-border) !important; }
+.shadow-surface { box-shadow: 0 1px 3px var(--surface-shadow), 0 1px 2px var(--surface-shadow) !important; }
+
+html {
+  overflow-x: hidden;
+}
 body{
   background: var(--background);
   color: var(--foreground);
@@ -114,3 +130,35 @@ html {
   background-color: var(--accent);
   color: var(--background);
 }
+
+/* Global button utilities */
+.btn-primary {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+}
+
+.btn-primary:hover {
+  background: var(--button-hover-bg);
+  color: var(--button-hover-text);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--surface-border);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-shadow);
+}
+
+.bg-accent { background: var(--accent) !important; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 1px 5px var(--surface-shadow);
+  color: var(--foreground);
+}
+

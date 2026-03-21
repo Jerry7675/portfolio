@@ -29,22 +29,18 @@ export default function AboutSnippet() {
         />
       </div>
       <div>
-        <h2 className="text-3xl font-extrabold mb-3" style={{ color: "var(--primary)" }}>
-          Hi, I'm Jerry 👋
-        </h2>
-        <p className="text-lg leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
-          <span className="font-semibold" style={{ color: "var(--foreground)" }}>
-            Full-Stack JavaScript Developer
-          </span>{" "}
+        <h2 className="text-3xl font-extrabold mb-3 text-primary">Hi, I'm Jerry 👋</h2>
+        <p className="text-lg leading-relaxed mb-2 text-muted">
+          <span className="font-semibold text-foreground">Full-Stack JavaScript Developer</span>{" "}
           specializing in React, Next.js, TypeScript, NestJS, Prisma, and cross-platform mobile
           apps.
         </p>
-        <p className="text-base leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
+        <p className="text-base leading-relaxed mb-2 text-muted">
           I bring a strong blend of frontend craftsmanship and backend reliability. My day-to-day
           work includes building optimized user interfaces, writing clean API services, and ensuring
           smooth client-server interactions with resilient authentication and data handling.
         </p>
-        <ul className="list-disc pl-5 space-y-1 text-base" style={{ color: "var(--foreground)" }}>
+        <ul className="list-disc pl-5 space-y-1 text-base text-foreground">
           <li>Bridging design & engineering for delightful UIs with pixel-perfect layouts</li>
           <li>Crafting robust backends and scalable microservices for real-time app flows</li>
           <li>
@@ -52,17 +48,15 @@ export default function AboutSnippet() {
           </li>
           <li>Mentoring juniors, performing code reviews, and collaborating across Agile teams</li>
         </ul>
-        <p className="mt-4 text-base" style={{ color: "var(--muted)" }}>
-          Key achievements:
-        </p>
-        <ul className="list-disc pl-5 space-y-1 text-base" style={{ color: "var(--foreground" }}>
+        <p className="mt-4 text-base text-muted">Key achievements:</p>
+        <ul className="list-disc pl-5 space-y-1 text-base text-foreground">
           <li>
             Delivered a production Yeti Nepal app using Next.js and NestJS with full JWT security.
           </li>
           <li>Implemented an automated CI/CD pipeline to reduce deployment friction by 30%.</li>
           <li>Built mobile experiences in Expo for cross-platform Android/iOS use.</li>
         </ul>
-        <p className="mt-4 text-base" style={{ color: "var(--muted)" }}>
+        <p className="mt-4 text-base text-muted">
           Outside work, I enjoy tech blogging, learning machine learning model integration, and
           contributing to open-source utilities for developer productivity.
         </p>
