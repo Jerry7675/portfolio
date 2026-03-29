@@ -112,12 +112,51 @@ body{
   }
 }
 
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(7deg);
+  }
+}
+
+@keyframes bounceEmphasis {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 10px 8px rgba(59, 130, 246, 0.14);
+  }
+}
+
 .animate-in {
   animation: fadeIn 0.3s ease-out;
 }
 
 .slide-in-from-left-4 {
   animation: slideInFromLeft 0.3s ease-out;
+}
+
+.float-up {
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+.bounce-emphasis {
+  animation: bounceEmphasis 1.4s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.2s ease-in-out infinite;
 }
 
 /* Smooth scroll behavior */

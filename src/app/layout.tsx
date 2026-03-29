@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Script id="json-ld" type="application/ld+json" strategy="afterInteractive">
+        <Script id="json-ld-person" type="application/ld+json" strategy="afterInteractive">
           {`{
             "@context": "https://schema.org",
             "@type": "Person",
@@ -103,6 +103,19 @@ export default function RootLayout({
             },
             "description": "Full Stack Developer building high-impact web applications with Next.js, TypeScript, Node.js",
             "knowsAbout": ["Next.js", "React", "TypeScript", "Node.js", "Web Development", "Portfolio"]
+          }`}
+        </Script>
+        <Script id="json-ld-website" type="application/ld+json" strategy="afterInteractive">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sandesh Poudel Chhetri Portfolio",
+            "url": "https://sandeshpoudelchhetri.me",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://sandeshpoudelchhetri.me/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
           }`}
         </Script>
         <FontComboClientWrapper>
