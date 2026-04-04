@@ -1,7 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { buildSEO } from "@/components/SEO";
+import SocialLinks from "@/components/SocialLinks";
 import profileData from "@/data/profile.json";
+
+export const metadata = buildSEO({
+  title: "Sandesh | Contact",
+  description: "Contact Sandesh for web development, engineering collaborations, and product work.",
+  url: "https://sandeshpoudelchhetri.me/contact",
+  image: "/sandeshPhoto.png",
+});
 
 type FormState = {
   name: string;
@@ -95,6 +104,9 @@ export default function ContactPage() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="mt-6">
+          <SocialLinks />
         </div>
       </section>
 
