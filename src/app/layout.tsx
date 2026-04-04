@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import Footer from "@/components/layout/Footer";
 import Sidebar from "@/components/layout/Sidebar";
 import FontComboClientWrapper from "@/components/ui/FontComboClientWrapper";
 
@@ -120,7 +121,10 @@ export default function RootLayout({
         </Script>
         <FontComboClientWrapper>
           <Sidebar />
-          {children}
+          <div className="min-h-screen md:pl-72">
+            {children}
+            <Footer />
+          </div>
         </FontComboClientWrapper>
       </body>
     </html>

@@ -29,7 +29,9 @@ export default function AboutSnippet() {
         />
       </div>
       <div>
-        <h2 className="text-3xl font-extrabold mb-3 text-primary">Hi, I'm Jerry 👋</h2>
+        <h2 className="text-3xl font-extrabold mb-3 text-primary">
+          Computer Engineer & Web Developer
+        </h2>
         <p className="text-lg leading-relaxed mb-2 text-muted">
           <span className="font-semibold text-foreground">Full-Stack JavaScript Developer</span>{" "}
           specializing in React, Next.js, TypeScript, NestJS, Prisma, and cross-platform mobile

@@ -3,6 +3,10 @@ import { NextResponse } from "next/server";
 const pages = [
   "https://sandeshpoudelchhetri.me/",
   "https://sandeshpoudelchhetri.me/about",
+  "https://sandeshpoudelchhetri.me/blog",
+  "https://sandeshpoudelchhetri.me/blog/patient-management-system",
+  "https://sandeshpoudelchhetri.me/blog/react-authentication-guide",
+  "https://sandeshpoudelchhetri.me/blog/firebase-security-rules",
   "https://sandeshpoudelchhetri.me/contact",
   "https://sandeshpoudelchhetri.me/education",
   "https://sandeshpoudelchhetri.me/experience",
